@@ -55,7 +55,7 @@ function CardsController() {
     for (var i in myList) {
       var character = myList[i];
       myTemplate += `
-        <div class="panel panel-default">
+        <div class="panel panel-default text-center">
           <div class="panel-heading">
              <h3 class="panel-title">${character.name}</h3>
           </div>
