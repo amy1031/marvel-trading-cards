@@ -39,13 +39,15 @@ function CardsController() {
     for (var i in marvelList) {
       var character = marvelList[i];
       marvelTemplate += `
-          <div class="card">
-            <img src="${character.thumbnail.path}.${character.thumbnail.extension}" width="100">
-            <h3>${character.name}</h3>
-            <div>
-              <button class="btn-success" id="${character.id}" onclick="cardsCtrl.onAdd(${character.id})">Add to Team</button> 
-            </div>
-          <div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">${character.name}</h3>
+        </div>
+        <div class="panel-body text-center">
+          <img src="${character.thumbnail.path}.${character.thumbnail.extension}" width="100">
+        </div>
+        <div class="panel-footer text-center"><button class="btn-success" id="${character.id}" onclick="cardsCtrl.onAdd(${character.id})">Add to Team</button> </div>
+      </div>
         `
     }
 
@@ -53,13 +55,17 @@ function CardsController() {
     for (var i in myList) {
       var character = myList[i];
       myTemplate += `
-          <div class="card">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+             <h3 class="panel-title">${character.name}</h3>
+          </div>
+          <div class="panel-body text-center">
             <img src="${character.thumbnail.path}.${character.thumbnail.extension}" width="100">
-            <h3>${character.name}</h3>
-            <div>
-              <button class="btn-danger" id="${character.id}" onclick="cardsCtrl.onRemove(${character.id})">Remove</button>
-            </div>
-          <div>
+          </div>
+          <div class="panel-footer text-center">
+            <button class="btn-danger" id="${character.id}" onclick="cardsCtrl.onRemove(${character.id})">Remove</button>
+          </div>
+      </div>
           `
     }
 
