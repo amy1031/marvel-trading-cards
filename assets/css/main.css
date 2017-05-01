@@ -21,3 +21,12 @@ h2 {
   margin: 0 auto;
   margin-bottom: 15px;
 }
+
+.panel .panel-heading {
+  background-color: #607f9c;
+  color: #fff;
+}
+
+.panel .panel-footer {
+  background-color: #c7dff5;
+}

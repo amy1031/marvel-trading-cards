@@ -44,7 +44,7 @@ function CardsController() {
           <h3 class="panel-title">${character.name}</h3>
         </div>
         <div class="panel-body text-center">
-          <img src="${character.thumbnail.path}.${character.thumbnail.extension}" width="100">
+          <img src="${character.thumbnail.path}.${character.thumbnail.extension}" width="100" class="img-circle">
         </div>
         <div class="panel-footer text-center"><button class="btn-success" id="${character.id}" onclick="cardsCtrl.onAdd(${character.id})">Add to Team</button> </div>
       </div>
@@ -60,7 +60,7 @@ function CardsController() {
              <h3 class="panel-title">${character.name}</h3>
           </div>
           <div class="panel-body text-center">
-            <img src="${character.thumbnail.path}.${character.thumbnail.extension}" width="100">
+            <img src="${character.thumbnail.path}.${character.thumbnail.extension}" width="100" class="img-circle">
           </div>
           <div class="panel-footer text-center">
             <button class="btn-danger" id="${character.id}" onclick="cardsCtrl.onRemove(${character.id})">Remove</button>
