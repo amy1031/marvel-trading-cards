@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +9,26 @@
   <link rel="stylesheet" href="assets/css/main.min.css" class="rel">
   <title>Marvel Trading Cards</title>
 </head>
-<body>
-<div id="marvel-characters"></div>
-<div id="my-characters"></div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="marvel-service.js"></script>
-<script src="cards-controller.js"></script>
-<script src="app.js"></script>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <h3>Available Characters</h3>
+        <div id="marvel-characters"></div>
+      </div>
+      <div class="col-xs-6">
+        <h3>Your Selected Characters</h3>
+        <h5><em>(Limit of 6)</em></h5>
+        <div id="my-characters"></div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="marvel-service.js"></script>
+  <script src="cards-controller.js"></script>
+  <script src="app.js"></script>
 
 </body>
+
 </html>

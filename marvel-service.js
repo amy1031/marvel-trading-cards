@@ -4,28 +4,43 @@ function MarvelService(){
   
   var marvelCharacters = []; // controls everything that happens to our data
   var myCharacters = [];
-  
+
   
   this.getMarvelCharacters = function(){
     //what should this function return
+    return marvelCharacters;
   }
   
   this.getMyCharacters = function(){
     //what should this function return
+    return myCharacters;
   }
   
   this.addToMyCharacters = function(id){
     //in order to add a character to your list you will first need to find 
     //the character by its id in the marvelCharacters array
-    
-    
-    // marvelCharacters(.id?) put into my own list
-
+    for (var i = 0; i < marvelCharacters.length; i++) {
+      var marvelCharacter = marvelCharacters[i];
+      if (marvelCharacter.id == id & myCharacters.length < 6) {
+        marvelCharacters.splice(i, 1);
+        myCharacters.push(marvelCharacter);
+        i--;
+      }
+    }
   }
   
   this.removeMyCharacter = function(id){
     //you need to find the character that you want to remove by its id
     //and remove it.
+    for (var i = 0; i < myCharacters.length; i++) {
+      var myCharacter = myCharacters[i];
+      if (myCharacter.id == id) {
+        myCharacters.splice(i, 1)
+        marvelCharacters.push(myCharacter);
+        //marvelCharacters.sort();
+        i--;
+      }
+    }
   }
   
   // takes in an argument
